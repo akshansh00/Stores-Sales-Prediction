@@ -9,7 +9,8 @@ app=Flask(__name__)
 @app.route("/",methods=['GET','Post'])
 def index():
     try:
-        raise Exception("we are testing custom exception")
+        pass
+        #raise Exception("we are testing custom exception")
     except Exception as e:
         sal = SalesException(e,sys)
         logging.info(sal.error_message)
